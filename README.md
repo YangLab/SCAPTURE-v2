@@ -1,12 +1,11 @@
-# SCAPTURE v2
-![image](https://github.com/YangLab/SCAPTURE/blob/main/scripts/Schematic%20diagram.jpg)
+# SCAPTURE
+
 
 
 Description:
 	SCAPRUTE pipeline. A deep learning-embedded pipeline that captures polyadenylation information from 3 prime tag-based RNA-seq of single cells
 
 ## Installation:
-* Require [Bedtools v2.26.0](https://bedtools.readthedocs.io/en/latest/)
 * Require [featureCounts ≥ v1.6.2](http://bioinf.wehi.edu.au/featureCounts/)
 
 * Create conda env from [SCAPTURE yaml file](https://github.com/YangLab/SCAPTURE/blob/main/SCAPTURE_env.yml):
@@ -173,13 +172,13 @@ Author: Guo-Wei Li Email: liguowei@picb.ac.cn
 	PBMC3k.intronic.peaks.bed # filtered intronic peaks
 	PBMC3k.intronic.peaks.annotated.bed # assigned intronic peaks
 	PBMC3k.intronic.peaks.evaluated.bed # evaluated intronic peaks
-	PBMC3k.3primeExtended.peaks.annotated.bed # assigned peaks in dowstream region beyond 3' end of genes
-	PBMC3k.3primeExtended.peaks.evaluated.bed # evaluated peaks in dowstream region beyond 3' end of genes
+	PBMC3k.3primeExtended.peaks.evaluated.bed # assigned peaks in dowstream region out of gene 3UTR locus
+	PBMC3k.3primeExtended.peaks.annotated.bed # evaluated peaks in dowstream region out of gene 3UTR locus
 
-  The output poly(A) site file was in widely-used [BED format](https://genome.ucsc.edu/FAQ/FAQformat.html#format1.7) [see](https://github.com/YangLab/SCAPTURE/blob/main/scripts/BED12_format.png).
+  The output poly(A) site file was in widely used [BED format](https://genome.ucsc.edu/FAQ/FAQformat.html#format1.7).
   
   Briefly, 
- * the 1-12 columns represent the spliced peak region of PAS.  [see](https://github.com/YangLab/SCAPTURE/blob/main/scripts/BED12_format.png)
+ * the 1-12 columns represent the spliced peak region of the peak region. 
 
   Specifically, for "evaluated.bed",
  * the 13th column is "number of refernce poly(A) sites supporting the PAS."
@@ -213,8 +212,8 @@ If your study includes multiple samples, SCAPTURE can merge the peak result from
 	PBMC_ALL.intronic.IntegratedSamples.bed
 	PBMC_ALL.3primeExtended.IntegratedSamples.bed
 	
-  Combined peaks are written in files with "Integrated.bed" [BED format](https://genome.ucsc.edu/FAQ/FAQformat.html#format1.7) [see](https://github.com/YangLab/SCAPTURE/blob/main/scripts/BED12_format.png),
- * the 1-12 columns represent the spliced peak region of PAS [see](https://github.com/YangLab/SCAPTURE/blob/main/scripts/BED12_format.png). 
+  Combined peaks are written in files with "Integrated.bed" [BED format](https://genome.ucsc.edu/FAQ/FAQformat.html#format1.7),
+ * the 1-12 columns represent the spliced peak region of the peak region. 
  * the 13th column is "number of refernce poly(A) sites supporting the PAS."
  * the 14th column is "DeepPASS prediction of the PAS."
  * the 15th column is "±100 nt sequence around the cleavage site of PAS."
@@ -256,16 +255,12 @@ If your study includes multiple samples, SCAPTURE can merge the peak result from
 	PBMC8k.PASquant.KeepCell.UMIs.tsv.gz
 	PBMC10k.PASquant.KeepCell.UMIs.tsv.gz
 
-# Single-cell APA analysis vignettes:
-	
-* A vignettes of single-cell APA analysis about COVID-19 study could be found at https://github.com/YangLab/SCAPTURE/blob/main/Vignettes.html.zip.
-
 
 ## License
 
   Copyright ©2021 Shanghai Institute of Nutrition and Health. All Rights Reserved.
 
-  Licensed GPLv3 for open source use or contact YangLab (yanglab@picb.ac.cn) for commercial use.
+  Licensed GPLv3 for open source use or contact YangLab (liyang_fudan@fudan.edu.cn) for commercial use.
 
   Permission to use, copy, modify, and distribute this software and its documentation for educational, research, and not-for-profit purposes, without fee and without a signed licensing agreement, is hereby granted, provided that the above copyright notice in all copies, modifications, and distributions. 
 
