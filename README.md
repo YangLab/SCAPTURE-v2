@@ -1,9 +1,7 @@
 # SCAPTURE
 
-
-
 Description:
-	SCAPRUTE pipeline. A deep learning-embedded pipeline that captures polyadenylation information from 3 prime tag-based RNA-seq of single cells
+	SCAPRUTE v2 pipeline. A species-spicefic deep learning-embedded pipeline that captures polyadenylation information from 3 prime tag-based RNA-seq of single cells
 
 ## Installation:
 * Require [featureCounts ≥ v1.6.2](http://bioinf.wehi.edu.au/featureCounts/)
@@ -64,7 +62,7 @@ Options:
 	-p          -- number of cores
 	-l          -- read length of sequenceing cDNA in scRNA-seq
 	-w          -- width of poly(A) peaks (default: 400)
- 	--species   -- species for DeepPASS model ('human', 'mouse')
+ 	--species   -- species for DeepPASS model ('human', 'mouse', 'rhesus', 'rat', 'zebrafish', 'fruitfly', 'worm')
 	--overlap   -- overlapped ratio of exonic peaks to merge (default: 0.5)
 	--polyaDB   -- poly(A) site database bed6 file (optional)
 	-h/---help  -- help information
@@ -102,9 +100,6 @@ Options:
                 (true, false, default: false)
 	-h/---help  -- help information
 
-Version: 1.0 2021/01/25
-
-Author: Guo-Wei Li Email: liguowei@picb.ac.cn
 
 ## Step-by-step protocol
 
@@ -255,6 +250,11 @@ If your study includes multiple samples, SCAPTURE can merge the peak result from
 	PBMC8k.PASquant.KeepCell.UMIs.tsv.gz
 	PBMC10k.PASquant.KeepCell.UMIs.tsv.gz
 
+## Cite
+
+SCAPTURE v1 pipeline: Li GW#, Nan F#, Yuan GH, Liu CX, Liu X, Chen LL, Tian B and Yang L*. SCAPTURE: a deep learning-embedded pipeline that captures polyadenylation information from 3' tag-based RNA-seq of single cells. Genome Biol, 2021, 22(1): 221 (PMID: 34376223)
+
+SCAPTURE v2 pipeline: 
 
 ## License
 
