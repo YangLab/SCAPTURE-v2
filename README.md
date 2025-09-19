@@ -1,7 +1,7 @@
 # SCAPTURE
 
 Description:
-	SCAPRUTE v2 pipeline. A species-spicefic deep learning-embedded pipeline that captures polyadenylation information from 3 prime tag-based RNA-seq of single cells
+	SCAPRUTE v2 pipeline. A species-spicefic deep learning-embedded pipeline that captures polyadenylation information from 3' tag-based RNA-seq of single cells.
 
 ## Installation:
 * Require [featureCounts ≥ v1.6.2](http://bioinf.wehi.edu.au/featureCounts/)
