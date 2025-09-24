@@ -254,7 +254,7 @@ If your study includes multiple samples, SCAPTURE can merge the peak result from
 
 SCAPTURE v1 pipeline: Li GW#, Nan F#, Yuan GH, Liu CX, Liu X, Chen LL, Tian B and Yang L*. SCAPTURE: a deep learning-embedded pipeline that captures polyadenylation information from 3' tag-based RNA-seq of single cells. Genome Biol, 2021, 22(1): 221 (PMID: 34376223)
 
-SCAPTURE v2 pipeline: 
+SCAPTURE v2 pipeline: Zhang PH#, Feng H#, Ma XK, Nan F* and Yang L*. PASSpedia: a polyadenylation site database across different species at single cell resolution. Genomics, Proteomics & Bioinformatics. Genomics, proteomics & bioinformatics, 2025 Accept in principle. (PMID: 40986375)
 
 ## License
 
